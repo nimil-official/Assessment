@@ -1,0 +1,101 @@
+.mainBtn{
+
+    margin-left:20px;
+    
+}
+
+.btnClass{
+    width : 65px;
+}
+
+.mainDiv{
+
+    padding-left: 29px;
+    padding-top: 15px;
+
+}
+
+.sideBarDiv{
+
+    padding-left: 29px;
+    padding-top: 10px;
+
+}
+
+.sideBar{
+
+    background-color: #ffffff;
+    height: 670px;
+
+}
+
+.barnDiv{
+
+    margin-top: 2px;
+
+}
+
+.radioBtn{
+    
+    text-align: center;
+
+}
+
+#scaleModel{
+
+    padding-left: 20px;
+    margin-left: 31px;
+    width: 62%;
+
+}
+
+
+.windowType{
+
+    opacity: 0;
+    padding: 0;
+    z-index: 1;
+    position: absolute;
+    
+
+}
+
+.colorDiv{
+
+    border: 4px solid rgb(250, 250, 250);
+    border-radius: 2px;
+    width: 35px !important;
+    height: 35px;
+    background-color: #a49c8a;
+    display: inline;
+    text-align: center;
+
+}
+
+.individualColor{
+
+    width: 100%;
+    height: 22px;
+    margin-left: -3px;
+
+}
+
+.innerColorDiv{
+
+    display: inline;
+    width: 25%;
+
+}
+
+.mainHeaders{
+
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 9px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: -13px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}

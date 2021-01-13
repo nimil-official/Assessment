@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+    <head>
+        <script type="text/javascript" src = "three/threejs.js"></script>
+        <script type="text/javascript" src = "three/OrbitControls.js"></script>
+        <script type="text/javascript" src = "three/MTLLoader.js"></script>
+        <script type="text/javascript" src = "three/OBJLoader.js"></script>
+        <script type="text/javascript" src = "three/SceneUtils.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="Bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        
+    </head>
+    <body>
+        <script type="text/javascript" src = "./scene.js"></script>
+        <script type="text/javascript" src = "./execution.js"></script>
+
+        <div class="row" >
+            <div class="col-10" id = "container"></div>
+            <div class="col-2">
+                <div class = "row sideBarDiv">
+
+                    <div class = "col-12 sideBar" >
+                        <div id = "stylesDiv">
+                            
+                                <!-- <div class = "radioBtn"><b>Models</b></div> -->
+                            <div class = "mainHeaders" id = "showHideModelDiv"><b>Models</b></div>
+                            <div id = "modelDiv" >
+                                <input type="radio" checked = true id="barn16" name="barn">
+                                <label for="barn16"><b>barn 16</b></label><br>
+                                <input type="radio" id="barn20" name="barn" >
+                                <label for="barn20"><b>barn 20</b></label><br>
+
+                                <div><b>Door</b></div>
+                                <input type="radio" checked = true id="showDoor" name="radioDoor">
+                                <label for="showDoor"><b>Show</b></label>
+                                <input type="radio" id="hideDoor" name="radioDoor" >
+                                <label for="hideDoor"><b>Hide</b></label><br>
+
+                                <div><b>Window</b></div>
+                                <input type="radio" checked = true id="showWindow" name="radioWindow">
+                                <label for="showWindow"><b>Show</b></label>
+                                <input type="radio" id="hideWindow" name="radioWindow" >
+                                <label for="hideWindow"><b>Hide</b></label><br>
+                    
+                            </div>
+
+                            <div class = "mainHeaders" id = "showHideScaleDiv"><b>Scale</b></div>
+                            <div id = "scaleDiv">
+                                <select name="scaleModel" id="scaleModel">
+                                    <option value="8-10">8-10</option>
+                                    <option value="8-12">8-12</option>
+                                    <option value="8-14">8-14</option>
+                                    <option value="8-16">8-16</option>
+                                    <option value="10-10">10-10</option>
+                                    <option value="10-12">10-12</option>
+                                    <option value="10-14">10-14</option>
+                                    <option value="10-16">10-16</option>
+                                    <option value="12-10">12-10</option>
+                                    <option value="12-12">12-12</option>
+                                    <option value="12-14">12-14</option>
+                                    <option value="12-16">12-16</option>
+                                </select>
+                            </div>
+                            
+
+                            <!-- <div class = "scaleDiv" >
+                                <div class = "radioBtn"><b>Colors</b></div>
+                                <div><b>Door Color</b></div>
+                                <div>
+                                    <div class = "windowColor">
+                                        <span>
+                                            <input class = "windowType" type="radio" id="a49c8a" name="window">
+                                            <div class = "colorDiv" ></div>
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div> -->
+
+                            <div class = "mainHeaders" id = "showHideColorDiv"><b>Color</b></div>
+                            <div id = "colorDiv">
+                                <div> Door Color </div>
+                                <div class = "row">
+                                    <div class = "col-3">
+                                        <input class = "doorColorClass" checked = true type="radio" id="door-5151ce" name="door">
+                                        <div class = "individualColor" style="background-color: #5151ce;"></div>
+                                        <!-- <label>Default</label> -->
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "doorColorClass" type="radio" id="door-754210" name="door">
+                                        <div class = "individualColor" style="background-color: #754210;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "doorColorClass" type="radio" id="door-dedad2" name="door">
+                                        <div class = "individualColor" style="background-color: #dedad2;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "doorColorClass" type="radio" id="door-35100b" name="door">
+                                        <div class = "individualColor" style="background-color: #35100b;"></div>
+                                    </div>
+                                </div>
+                                <div> Model Color </div>
+                                <div class = "row">
+                                    <div class = "col-3">
+                                        <input class = "roofColorClass" checked = true type="radio" id="roof-5151ce" name="whole">
+                                        <div class = "individualColor" style="background-color: #5151ce;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "roofColorClass" type="radio" id="roof-754210" name="whole">
+                                        <div class = "individualColor" style="background-color: #754210;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "roofColorClass" type="radio" id="roof-dedad2" name="whole">
+                                        <div class = "individualColor" style="background-color: #dedad2;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "roofColorClass" type="radio" id="roof-35100b" name="whole">
+                                        <div class = "individualColor" style="background-color: #35100b;"></div>
+                                    </div>
+                                </div>
+                                <div> Window Color </div>
+                                <div class = "row">
+                                    <div class = "col-3">
+                                        <input class = "windowColorClass" checked = true type="radio" id="window-5151ce" name="window">
+                                        <div class = "individualColor" style="background-color: #5151ce;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "windowColorClass" type="radio" id="window-754210" name="window">
+                                        <div class = "individualColor" style="background-color: #754210;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "windowColorClass" type="radio" id="window-dedad2" name="window">
+                                        <div class = "individualColor" style="background-color: #dedad2;"></div>
+                                    </div>
+                                    <div class = "col-3">
+                                        <input class = "windowColorClass" type="radio" id="window-35100b" name="window">
+                                        <div class = "individualColor" style="background-color: #35100b;"></div>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
